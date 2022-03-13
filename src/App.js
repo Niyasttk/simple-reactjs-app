@@ -8,13 +8,14 @@ import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-do
 class App extends Component {
   render() {
     console.log("Host URL"+process.env.PUBLIC_URL);
+    const password = "password";
     return (
 
       <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Simple React App</h1>
+          <h1 className="App-title">Simple React App${password}</h1>
         </header>
           <Switch>
                 <Route exact path= "/" render={() => (
